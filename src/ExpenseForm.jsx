@@ -25,20 +25,25 @@ function ExpenseForm({ onAddExpense }) {
 
   return (
     <form className="expense-form" onSubmit={handleSubmit}>
+        <div className="form-control">
         <input 
             placeholder="Expense Title" 
             type="text" 
             value={title} 
             onChange={(e) => setTitle(e.target.value)}
             ref={titleRef}
-        />
+            className='expense-input'
+        /> <br />
         <input 
             placeholder="Amount ₹" 
             type="number" 
             value={amount} 
             onChange={(e) => setAmount(e.target.value)}
+            className='expense-input'
         />
+        <br />
         <button type="submit">Add Expense</button>
+        </div>
     </form>
   )
 }
